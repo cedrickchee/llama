@@ -98,7 +98,7 @@ Current high-level plan (tentatively):
     - PP: shard layers - split the model up vertically (layer-level) across multiple GPUs.
     - TP: split each tensor up into multiple shards, so instead of having the whole tensor reside on a single GPU, each shard of the tensor resides on its designated GPU.
 
-  Port LLaMA PyTorch model (based on metaseq, torchscale?) to HuggingFace Transformers.
+  Port LLaMA PyTorch model (based on metaseq, fairscale?) to HuggingFace Transformers.
 
 To round up, start with [🤗 PEFT: Parameter-Efficient Fine-Tuning of Billion-Scale Models on Low-Resource Hardware](https://huggingface.co/blog/peft) - The HugingFace PEFT library enables using the most popular and performant models from Transformers coupled with the simplicity and scalability of Accelerate. Currently supported PEFT methods: LoRA, prefix tuning, prompt tuning, and P-Tuning (which employs trainable continuous prompt embeddings). They'll be exploring more PEFT methods, such as (IA)3 and bottleneck adapters. Results: The number of parameters needed to fine-tune Flan-T5-XXL is now 9.4M, about 7X fewer than AlexNet.
 
