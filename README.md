@@ -1,4 +1,27 @@
-# LLaMA 
+# LLaMA
+
+This is a variant of the LLaMA model and has the following changes:
+- **Compression:** 8-bit model quantization using [bitsandbytes](https://huggingface.co/blog/hf-bitsandbytes-integration)
+- **Non-Model Parallel (MP):** run 13B model in a single GPU. All MP codes removed.
+
+And more soon. I'm [experimenting with compression and acceleration techniques](./chattyllama/README.md#llama-model-weights) to make the models:
+- smaller and faster
+- run on low-resources hardwares
+
+I'm also building LLaMA-based ChatGPT.
+
+## Hardware
+
+- [Guide on GPU requirements](./chattyllama/hardware.md#guide-on-gpu-requirements)
+- [Memory requirements for each model size](./chattyllama/hardware.md#memory-requirements-for-each-model-size)
+
+## ChattyLLaMA
+
+[ChattyLLaMA](./chattyllama/) is **experimental** LLaMA-based ChatGPT.
+
+---
+
+# Original README
 
 This repository is intended as a minimal, hackable and readable example to load [LLaMA](https://ai.facebook.com/blog/large-language-model-llama-meta-ai/) ([arXiv](https://arxiv.org/abs/2302.13971v1)) models and run inference.
 In order to download the checkpoints and tokenizer, fill this [google form](https://forms.gle/jk851eBVbX1m5TAv5)
@@ -43,14 +66,3 @@ See [MODEL_CARD.md](MODEL_CARD.md)
 
 ### License
 See the [LICENSE](LICENSE) file.
-
----
-
-# Hardware
-
-- [Guide on GPU requirements](./chattyllama/hardware.md#guide-on-gpu-requirements)
-- [Memory requirements for each model size](./chattyllama/hardware.md#memory-requirements-for-each-model-size)
-
-# ChattyLLaMA
-
-[ChattyLLaMA](./chattyllama/) is **experimental** LLaMA-based ChatGPT.
