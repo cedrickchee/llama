@@ -46,6 +46,11 @@ See the [LICENSE](LICENSE) file.
 
 ---
 
+# Hardware
+
+- [Guide on GPU requirements](./chattyllama/hardware.md#guide-on-gpu-requirements)
+- [Memory requirements for each model size](./chattyllama/hardware.md#memory-requirements-for-each-model-size)
+
 # ChattyLLaMA
 
 [ChattyLLaMA](./chattyllama/) is **experimental** LLaMA-based ChatGPT.
