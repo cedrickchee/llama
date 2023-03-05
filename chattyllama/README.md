@@ -40,7 +40,7 @@ using RLHF.
 ### LLaMA model weights
 
 _The below is my experiments with all the compression and acceleration techniques, tricks, algorithms, and
-more — documented in my [awesome-ml-model-compression](github.com/cedrickchee/awesome-ml-model-compression) project._
+more — documented in my [awesome-ml-model-compression](https://github.com/cedrickchee/awesome-ml-model-compression) project._
 
 **Goals:**
 
