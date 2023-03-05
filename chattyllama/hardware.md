@@ -61,17 +61,21 @@ Memory requirements in 8-bit precision:
 |                          |      |      |      |      |
 | Total                    | 14   | 26   | 63   | 125  |
 
-Example: 7B require at least 14GB VRAM in 8-bit (int8) precision. 28GB in 16-bit (fp16) precision (a doubled of VRAM).
+**Example:** 7B require at least 14GB VRAM in 8-bit (int8) precision. 28GB in 16-bit (fp16) precision (a doubled of VRAM).
 
-_*** Model (on disk) is the total file size of `consolidated.XX.pth` for a model. For example, 13B is 25GB because it has two `consolidated.XX.pth` files, each has a file size of 12GB._
+
+_*** Model (on disk) is the total file size of `consolidated.XX.pth` for a model. For example, 13B is 24GB because it has two `consolidated.XX.pth` files, each has a file size of 12GB. Weight file sizes are below._
+
+![llama-model-weights-resized](https://user-images.githubusercontent.com/145605/222949548-4970b717-64e4-482f-b9d2-ab77669b11cb.png)
+
+Well, 65B needs a GPU cluster with a total of 125GB VRAM in int8 precison or 250GB in fp16.
 
 [Spreadsheet](https://docs.google.com/spreadsheets/d/1EsRZcsvbITBCfb5N1toir5huomZxIq4lDNwQW3NfPRE/edit)
 to calculate the memory requirements for each model size, following the FAQ and
 paper. You can make a copy to adjust the batch size and sequence length.[^1]
 
-Well, 65B needs a GPU cluster with a total of 125GB VRAM in int8 precison. 250GB in fp16.
-
-Some people just made enough code changes to **run the 7B model on the CPU**. [^2]
+I've seen some people just made enough code changes to **run the 7B model on the CPU**. [^2]
+I can't confirm this though.
 
 [^1]: [GitHub Issue: Post your hardware specs here if you got it to work](https://github.com/facebookresearch/llama/issues/79#issuecomment-1453814121)
 [^2]: [GitHub Issue reply by "gmorenz"](https://github.com/facebookresearch/llama/issues/79#issuecomment-1454042028)
