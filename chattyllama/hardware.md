@@ -15,10 +15,10 @@ requirements.
 
 | Model  | MP* | GPU        | VRAM  | Precision |Environment   |
 |--------|-----|------------|-------|-----------|--------------|
-| 7B     | 1   | 1x A100    | 40GB  | 32-bit    | Colab Pro    |
-| 7B^    | 1   | 1x RTX 3090| 24GB  | 32-bit    | Home PC      |
-| 7B     | 1   | 1x A4000   | 16GB  | 32-bit    | Home PC      |
-| 7B^^   | 1   | 1x RTX 2080| 8GB   | 32-bit    | Home PC      |
+| 7B     | 1   | 1x A100    | 40GB  | TF32      | Colab Pro    |
+| 7B^    | 1   | 1x RTX 3090| 24GB  | FP32      | Home PC      |
+| 7B     | 1   | 1x A4000   | 16GB  | TF32      | Home PC      |
+| 7B^^   | 1   | 1x RTX 2080| 8GB   | FP32      | Home PC      |
 
 | Model  | MP* | GPU        | VRAM  | Precision |Environment   |
 |--------|-----|------------|-------|-----------|--------------|
@@ -38,7 +38,7 @@ _^ A modified of LLaMA model (`model.py`), configured for running with a single 
 
 _^^ A modified of LLaMA model. Only keep a single transformer block on the GPU at a time. Changed from fairscale layers to `torch.nn.Linear`. Details, see [this GitHub Issue](https://github.com/facebookresearch/llama/issues/79#issuecomment-1454707663)._
 
-_** 32-bit refers to TF32; mixed precision refers to Automatic Mixed Precision (AMP)._
+_** 8-bit quantized model._
 
 ### Memory requirements for each model size
 
