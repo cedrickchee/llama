@@ -52,18 +52,24 @@ Model arguments:
 | n_heads                  | 32   | 40   | 52   | 64   |
 | dimension                | 4096 | 5120 | 6656 | 8192 |
 
+Memory requirements in 8-bit precision:
+
 | Memory Requirements (GB) | 6.7  | 13   | 32.5 | 65.2 |
 |--------------------------|------|------|------|------|
-| Model (on disk)          | 13   | 25   | 65   | 130  |
+| Model (on disk)***       | 13   | 24   | 60   | 120  |
 | Cache                    | 1    | 2    | 3    | 5    |
 |                          |      |      |      |      |
-| Total                    | 14   | 27   | 68   | 135  |
+| Total                    | 14   | 26   | 63   | 125  |
+
+Example: 7B require at least 14GB VRAM in 8-bit (int8) precision. 28GB in 16-bit (fp16) precision (a doubled of VRAM).
+
+_*** Model (on disk) is the total file size of `consolidated.XX.pth` for a model. For example, 13B is 25GB because it has two `consolidated.XX.pth` files, each has a file size of 12GB._
 
 [Spreadsheet](https://docs.google.com/spreadsheets/d/1EsRZcsvbITBCfb5N1toir5huomZxIq4lDNwQW3NfPRE/edit)
 to calculate the memory requirements for each model size, following the FAQ and
 paper. You can make a copy to adjust the batch size and sequence length.[^1]
 
-Well, 65B needs a GPU cluster with a total of 135GB VRAM.
+Well, 65B needs a GPU cluster with a total of 125GB VRAM in int8 precison. 250GB in fp16.
 
 Some people just made enough code changes to **run the 7B model on the CPU**. [^2]
 
