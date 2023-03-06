@@ -13,33 +13,31 @@ How much GPU VRAM do I need to run the 7B model? Can 65B fit on 4x RTX 3090? Out
 Here's a table showing a working combination of model sizes, GPU name, and VRAM
 requirements. Some data points are reported by other users.
 
-| Model  | MP* | GPU        | Min. VRAM  | Precision |Environment   | Throughput |
-|--------|-----|------------|------------|-----------|--------------|------------|
-| 7B     | 1   | A100 40GB  | 40GB       | TF32      | Colab Pro    |            |
-| 7B^    | 1   | 3090 24GB  | 24GB       | FP32      | Home PC      |            |
-| 7B     | 1   | A4000 16GB | 16GB       | TF32      | Home PC      |            |
-| 7B**   | 1   | 3060 12GB  | 10GB       | int8      |              | 6-9it/s    |
-| 7B**   | 1   | 3080 10GB  | 10GB       | int8      |              |            |
-| 7B**   | 1   | 3090 24GB  | 10GB       | int8      |              | 30-50it/s  |
-| 7B^^   | 1   | 2080 8GB   | 8GB        | FP32      | Home PC      |            |
+| Model  | GPU        | Min. VRAM  | VRAM Used | Precision | Environment   | Throughput |
+|--------|------------|------------|-----------|-----------|---------------|------------|
+| 7B     | A100 40GB  | 40GB       | No OOM    | TF32      | Colab Pro     | <1 tok/s   |
+| 7B^    | 3090 24GB  | 24GB       | No OOM    | FP32      | Home PC       | ??         |
+| 7B     | A4000 16GB | 16GB       | No OOM    | TF32      | Home PC       | ??         |
+| 7B**   | 3060 12GB  | 10GB       | 9.1GB     | int8      | Unspecified   | 4-9it/s    |
+| 7B**   | 3080 10GB  | 10GB       | 9.2GB     | int8      | Unspecified   | ??         |
+| 7B**   | 3090 24GB  | 10GB       | 9.4GB     | int8      | Unspecified   | 29-55it/s  |
+| 7B^^   | 2080 8GB   | 8GB        |           | FP32      | Home PC       | ??         |
 
-| Model  | MP* | GPU        | Min. VRAM  | Precision |Environment   | Throughput |
-|--------|-----|------------|------------|-----------|--------------|------------|
-| 13B**  | 2   | 3090Ti 24GB| 20GB       | int8      |              | 10-30 it/s |
-| 13B**  | 2   | 4090 24GB  | 20GB       | int8      |              | 10-30 it/s |
+| Model  | GPU        | Min. VRAM  | VRAM Used | Precision | Environment   | Throughput |
+|--------|------------|------------|-----------|-----------|---------------|------------|
+| 13B**  | 3090Ti 24GB| 20GB       | 16.2GB     | int8     | Unspecified   | 13-29 it/s |
+| 13B**  | 4090 24GB  | 20GB       | 16.5GB     | int8     | Unspecified   | 11-32 it/s |
 
-| Model  | MP* | GPU        | Min. VRAM  | Precision |Environment   | Throughput |
-|--------|-----|------------|------------|-----------|--------------|------------|
-| 33B**  | 4   | A6000 48GB | 40GB       | int8      |              | 20-40 it/s |
-| 33B**  | 4   | A100 40GB  | 40GB       | int8      |              | 20-40 it/s |
+| Model  | GPU        | Min. VRAM  | VRAM Used | Precision | Environment   | Throughput |
+|--------|------------|------------|-----------|-----------|---------------|------------|
+| 33B**  | A6000 48GB | 40GB       | 35.8GB    | int8      | Unspecified   | 19-38 it/s |
+| 33B**  | A100 40GB  | 40GB       | 36.2GB    | int8      | Unspecified   | 21-39 it/s |
 
-| Model  | MP* | GPU        | Min. VRAM  | Precision |Environment   | Throughput |
-|--------|-----|------------|------------|-----------|--------------|------------|
-| 65B**  | 8   | A100 80GB  | 80GB       | int8      |              |            |
+| Model  | GPU        | Min. VRAM  | VRAM Used | Precision | Environment   | Throughput |
+|--------|------------|------------|-----------|-----------|---------------|------------|
+| 65B**  | A100 80GB  | 80GB       | ~74.3GB   | int8      | Unspecified   | 15-35 it/s |
 
 (_WIP: incomplete, accuracy is not fully confirm yet._)
-
-_* Model Parallel (MP) encompasses both Pipeline Parallel (PP) and Tensor Parallel (TP)?_
 
 _^ A modified of LLaMA model (`model.py`), configured for running with a single GPU (default is distributed GPU).Lowered batch size to 1 so the model can fit within VRAM._
 
