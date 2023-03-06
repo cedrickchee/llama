@@ -43,6 +43,71 @@ Source files location:
 - `chattyllama/model.py`: a fork of LLaMA model.
 - `chattyllama/inference.py`: run model inference
 
+### Code Examples
+
+Code walkthrough: [notebooks](./notebooks/).
+
+This shows how you can get it running on 1x A100 40GB GPU. The code is outdated though. It' using the original model version from MetaAI.
+
+For bleeding edge things, follow the below quick start.
+
+#### Quick start
+
+1. Download model weights into `./model`.
+
+2. Install all the needed dependencies.
+
+```sh
+$ git clone https://github.com/cedrickchee/llama.git
+$ cd llama && pip install -r requirements.txt
+```
+
+**Note:**
+
+- Don't use Conda. Use pip.
+- If you have trouble with bitsandbytes, [build and install it from source](https://github.com/TimDettmers/bitsandbytes/blob/main/compile_from_source.md).
+
+```sh
+$ pip install -e .
+#torchrun --nproc_per_node 1 example.py --ckpt_dir ../7B --tokenizer_path ../tokenizer.model
+$ cd chattyllama/combined
+```
+
+3. Modify `inference.py` with the path to your weights directory:
+
+```py
+# ...
+
+if __name__ == "__main__":
+    main(
+        ckpt_dir="/model/vi/13B", # <-- change the path
+        tokenizer_path="/model/vi/tokenizer.model", # <-- change the path
+        temperature=0.7,
+        top_p=0.85,
+        max_seq_len=1024,
+        max_batch_size=1
+    )
+```
+
+4. Modify `inference.py` with your prompt:
+
+```py
+def main(...):
+    # ...
+
+    prompts = [
+        "I believe the meaning of life is"
+    ]
+
+    # ...
+```
+
+5. Run inference:
+
+```sh
+$ python inference.py
+```
+
 ---
 
 # Original README
