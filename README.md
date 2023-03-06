@@ -47,7 +47,7 @@ Source files location:
 
 Code walkthrough: [notebooks](./notebooks/).
 
-This shows how you can get it running on 1x A100 40GB GPU. The code is outdated though. It' using the original model version from MetaAI.
+This shows how you can get it running on 1x A100 40GB GPU. The code is outdated though. It's using the original model version from MetaAI.
 
 For bleeding edge things, follow the below quick start.
 
@@ -107,6 +107,15 @@ def main(...):
 ```sh
 $ python inference.py
 ```
+
+### LLaMA compatible port
+
+Looking to use LLaMA model with HuggingFace library?
+Well look at [my "transformers-llama" repo](https://github.com/cedrickchee/transformers-llama).
+
+#### Other ports
+
+(coming soon...)
 
 ---
 
