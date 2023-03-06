@@ -22,6 +22,27 @@ I'm also building LLaMA-based ChatGPT.
 
 [ChattyLLaMA](./chattyllama/) is **experimental** LLaMA-based ChatGPT.
 
+### Documentations
+
+All the new codes are available in the [chattyllama](./chattyllama/) directory.
+
+**Combined**
+
+All changes and fixes baked into one:
+- Non-Model Parallel (MP): all MP logic removed (MP shards weights across a GPU cluster setup)
+- 8-bit quantized model using bitsandbytes
+- Sampler fixes, better sampler
+
+Source files location:
+- `chattyllama/combined/model.py`: a fork of LLaMA model.
+- `chattyllama/combined/inference.py`: run model inference (it's a modified copy of `example.py`).
+
+**Non-MP/single GPU**
+
+Source files location:
+- `chattyllama/model.py`: a fork of LLaMA model.
+- `chattyllama/inference.py`: run model inference
+
 ---
 
 # Original README
