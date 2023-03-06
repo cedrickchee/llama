@@ -3,6 +3,9 @@
 This is a variant of the LLaMA model and has the following changes:
 - **Compression:** 8-bit model quantization using [bitsandbytes](https://huggingface.co/blog/hf-bitsandbytes-integration)
 - **Non-Model Parallel (MP):** run 13B model in a single GPU. All MP codes removed.
+- **Extended model:**
+  - Fix the sampler — a better sampler that improve generations quality: `temperature`, `top_p`, `repetition_penalty`, `tail_free`.
+  - (Future): provides more controls for generations, expose repetition penalty so that CLI can pass-in the options.
 
 And more soon. I'm [experimenting with compression and acceleration techniques](./chattyllama/README.md#llama-model-weights) to make the models:
 - smaller and faster
