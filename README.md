@@ -123,6 +123,28 @@ Well look at [my "transformers-llama" repo](https://github.com/cedrickchee/trans
     - Train with prompt data from: [fka/awesome-minichatgpt-prompts](https://huggingface.co/datasets/fka/awesome-minichatgpt-prompts). Training scripts and instructions [here](https://github.com/juncongmoo/minichatgpt/tree/main/examples#train-with-real-prompt-data).
     - Train the reward model using [Dahoas/rm-static](https://huggingface.co/datasets/Dahoas/rm-static) dataset.
 
+### Plan
+
+TODO:
+
+**Priority: high**
+
+- [ ] Improve sampler - refer to [shawwn/llama](https://github.com/shawwn/llama) fork.
+- [ ] Finetune the models on a diverse set of instructions datasets from LAION's
+OpenAssistant. (blocked by dataset v1)
+- [ ] Try the fine-tuning protocol from Flan.
+  - LLaMA paper touches on finetuning briefly, referencing that.
+
+**Priority: low**
+
+- [ ] Start and try other fine-tuning ideas:
+  - ChatGPT-like = LLaMA + CarperAI's tRLX (RLHF) library + Anthropic's public preference dataset. I don't know how feasible if the experiments are larger scale (compute-wise) that use RL models that are good at instruction following.
+
+Reminder-to-self:
+
+- People under-appreciate fine-tuning alone compared to RLHF. RL algorithms
+(unsupervised) are quite finicky compared to supervised deep learning. RL is
+hard-ish.
 
 ---
 
