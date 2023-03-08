@@ -135,8 +135,8 @@ TODO:
 **Priority: high**
 
 - [ ] Improve sampler - refer to [shawwn/llama](https://github.com/shawwn/llama) fork.
-- [ ] Finetune the models on a diverse set of instructions datasets from LAION's
-OpenAssistant. (blocked by dataset v1)
+- [ ] Fine-tune the models on a diverse set of instructions datasets from LAION's
+OpenAssistant. Check out my [ChatGPT notes](https://github.com/cedrickchee/chatgpt-universe#training-data) for larger training data. (blocked by dataset v1)
 - [ ] Try the fine-tuning protocol from Flan.
   - LLaMA paper touches on finetuning briefly, referencing that.
 - [ ] Fine-tune model with HF's PEFT and Accelerate. PEFT doesn't support causal LM like LLaMA yet (blocked by [PR](https://github.com/huggingface/peft/pull/160))
