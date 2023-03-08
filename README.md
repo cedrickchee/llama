@@ -115,7 +115,14 @@ Well look at [my "transformers-llama" repo](https://github.com/cedrickchee/trans
 
 #### Other ports
 
-(coming soon...)
+- [pyllama](https://github.com/juncongmoo/pyllama) - Run LLM in a single GPU, as simple as `pip install pyllama`. It's a quick & dirty hacked version of 🦙 LLaMA. Bonus: comes with a way to start a Gradio Web UI for trying out prompting in browser. Good tips: "To load KV cache in CPU, run `export KV_CAHCHE_IN_GPU=0` in the shell.".
+- [minichatgpt](https://github.com/juncongmoo/minichatgpt) - Train ChatGPT in minutes with [ColossalAI (blog post)](https://www.hpc-ai.tech/blog/colossal-ai-chatgpt) (minichatgpt training process is pending my verification. I think the code there was based on ColossalAI's mini demo.)
+  - Supports LoRA
+  - Supports RL paradigms, like reward model, PPO
+  - Datasets used for training:
+    - Train with prompt data from: [fka/awesome-minichatgpt-prompts](https://huggingface.co/datasets/fka/awesome-minichatgpt-prompts). Training scripts and instructions [here](https://github.com/juncongmoo/minichatgpt/tree/main/examples#train-with-real-prompt-data).
+    - Train the reward model using [Dahoas/rm-static](https://huggingface.co/datasets/Dahoas/rm-static) dataset.
+
 
 ---
 
