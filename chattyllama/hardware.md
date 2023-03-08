@@ -59,7 +59,7 @@ Model arguments:
 
 The above numbers are gathered from the paper (Table 2).
 
-Memory requirements in fp16 precision (before int8 quantization):
+Memory requirements in **fp16** precision (before int8 quantization):
 
 | Model Params (Billions)  | 6.7  | 13   | 32.5 | 65.2 |
 |--------------------------|------|------|------|------|
@@ -84,7 +84,7 @@ _*** Model (on disk) is the total file size of `consolidated.XX.pth` for a model
 
 ![llama-model-weights-resized](https://user-images.githubusercontent.com/145605/222949548-4970b717-64e4-482f-b9d2-ab77669b11cb.png)
 
-Well, 65B needs a GPU cluster with a total of 125GB VRAM in int8 precison or 250GB in fp16.
+Well, 65B needs 133GB in fp16 or 66.5GB in int8 precison. That's a single A100 80GB.
 
 [Spreadsheet](https://docs.google.com/spreadsheets/d/1EsRZcsvbITBCfb5N1toir5huomZxIq4lDNwQW3NfPRE/edit)
 to calculate the memory requirements for each model size, following the FAQ and
