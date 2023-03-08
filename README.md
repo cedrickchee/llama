@@ -29,7 +29,7 @@ All the new codes are available in the [chattyllama](./chattyllama/) directory.
 **Combined**
 
 All changes and fixes baked into one:
-- Non-Model Parallel (MP): all MP logic removed (MP shards weights across a GPU cluster setup)
+- Non-Model Parallel (MP): all MP constructs removed (MP shards weights across a GPU cluster setup)
 - 8-bit quantized model using bitsandbytes
 - Sampler fixes, better sampler
 
@@ -122,6 +122,10 @@ Well look at [my "transformers-llama" repo](https://github.com/cedrickchee/trans
   - Datasets used for training:
     - Train with prompt data from: [fka/awesome-minichatgpt-prompts](https://huggingface.co/datasets/fka/awesome-minichatgpt-prompts). Training scripts and instructions [here](https://github.com/juncongmoo/minichatgpt/tree/main/examples#train-with-real-prompt-data).
     - Train the reward model using [Dahoas/rm-static](https://huggingface.co/datasets/Dahoas/rm-static) dataset.
+
+### Supporting tools
+
+- [Resharding and HuggingFace conversion](https://github.com/dmahan93/llama/blob/main/CONVERSIONS.md) - Useful scripts for transforming the weights, if you still want to spread the weights and run the larger model (in fp16 instead of int8) across multiple GPUs for some reasons.
 
 ### Plan
 
