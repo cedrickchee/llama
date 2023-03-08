@@ -139,6 +139,7 @@ TODO:
 OpenAssistant. (blocked by dataset v1)
 - [ ] Try the fine-tuning protocol from Flan.
   - LLaMA paper touches on finetuning briefly, referencing that.
+- [ ] Fine-tune model with HF's PEFT and Accelerate. PEFT doesn't support causal LM like LLaMA yet (blocked by [PR](https://github.com/huggingface/peft/pull/160))
 
 **Priority: low**
 
