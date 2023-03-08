@@ -115,6 +115,7 @@ Well look at [my "transformers-llama" repo](https://github.com/cedrickchee/trans
 
 #### Other ports
 
+- [Text generation web UI](https://github.com/oobabooga/text-generation-webui) - A Gradio Web UI for running Large Language Models like LLaMA, GPT-Neo, OPT, and friends.
 - [pyllama](https://github.com/juncongmoo/pyllama) - Run LLM in a single GPU, as simple as `pip install pyllama`. It's a quick & dirty hacked version of 🦙 LLaMA. Bonus: comes with a way to start a Gradio Web UI for trying out prompting in browser. Good tips: "To load KV cache in CPU, run `export KV_CAHCHE_IN_GPU=0` in the shell.".
 - [minichatgpt](https://github.com/juncongmoo/minichatgpt) - Train ChatGPT in minutes with [ColossalAI (blog post)](https://www.hpc-ai.tech/blog/colossal-ai-chatgpt) (minichatgpt training process is pending my verification. I can confirm the code there was based on ColossalAI's [mini demo](https://github.com/hpcaitech/ColossalAI/tree/main/applications/ChatGPT). It doesn't support LLaMA yet.)
   - Supports LoRA
