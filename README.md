@@ -116,6 +116,13 @@ Well look at [my "transformers-llama" repo](https://github.com/cedrickchee/trans
 #### Other ports
 
 - [Text generation web UI](https://github.com/oobabooga/text-generation-webui) - A Gradio Web UI for running Large Language Models like LLaMA, GPT-Neo, OPT, and friends.
+- [LLaMa CPU fork](https://github.com/markasoftware/llama-cpu) - We need more work like this that lower the compute requirements. Really under appreciated.
+- [LLaMA Jax](https://github.com/Sea-Snell/JAX_llama)
+- [Minimal LLaMA](https://github.com/cedrickchee/minimal-llama) - Jason's HuggingFace Transformers port using OPT code internally. This version should be more stable. But the code is not well-tested yet. Bonus: you can quickly see how well the model can be fine-tuned either using HuggingFace PEFT with 8-bit or Pipeline Parallelism.
+
+<details>
+<summary>See more</summary>
+
 - [pyllama](https://github.com/juncongmoo/pyllama) - Run LLM in a single GPU, as simple as `pip install pyllama`. It's a quick & dirty hacked version of 🦙 LLaMA. Bonus: comes with a way to start a Gradio Web UI for trying out prompting in browser. Good tips: "To load KV cache in CPU, run `export KV_CAHCHE_IN_GPU=0` in the shell.".
 - [minichatgpt](https://github.com/juncongmoo/minichatgpt) - Train ChatGPT in minutes with [ColossalAI (blog post)](https://www.hpc-ai.tech/blog/colossal-ai-chatgpt) (minichatgpt training process is pending my verification. I can confirm the code there was based on ColossalAI's [mini demo](https://github.com/hpcaitech/ColossalAI/tree/main/applications/ChatGPT). It doesn't support LLaMA yet.)
   - Supports LoRA
@@ -123,6 +130,7 @@ Well look at [my "transformers-llama" repo](https://github.com/cedrickchee/trans
   - Datasets used for training:
     - Train with prompt data from: [fka/awesome-minichatgpt-prompts](https://huggingface.co/datasets/fka/awesome-minichatgpt-prompts). Training scripts and instructions [here](https://github.com/juncongmoo/minichatgpt/tree/main/examples#train-with-real-prompt-data).
     - Train the reward model using [Dahoas/rm-static](https://huggingface.co/datasets/Dahoas/rm-static) dataset.
+</details>
 
 ### Supporting tools
 
