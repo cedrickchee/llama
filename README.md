@@ -119,6 +119,12 @@ Well look at [my "transformers-llama" repo](https://github.com/cedrickchee/trans
 - [LLaMa CPU fork](https://github.com/markasoftware/llama-cpu) - We need more work like this that lower the compute requirements. Really under appreciated.
 - [LLaMA Jax](https://github.com/Sea-Snell/JAX_llama)
 - [Minimal LLaMA](https://github.com/cedrickchee/minimal-llama) - Jason's HuggingFace Transformers port using OPT code internally. This version should be more stable. But the code is not well-tested yet. Bonus: you can quickly see how well the model can be fine-tuned either using HuggingFace PEFT with 8-bit or Pipeline Parallelism.
+- [Running LLaMA 7B on a 64GB M2 MacBook Pro with llama.cpp](https://til.simonwillison.net/llms/llama-7b-m2) by Simon Willison - llama.cpp is from the same Whisper.cpp hacker, ggerganov. Never dissapointed by ggerganov's work.
+  > It's genuinely possible to run a LLM that's hinting towards the performance of GPT3 on your own hardware now. I thought that was still a few years away.
+
+   Looking at this rate of model compression/acceleration progress, soon we can run a LLM inference locally on mobile devices. QNNPACK, a hardware optimized library that also supports mobile processors can help. JIT compiler like OpenXLA/PyTorch Glow can optimize the computation graph so the model runs well on low-resources hardware.
+  
+  We underestimated pre-trained language models (~2019) and overestimated a lot of things.
 
 <details>
 <summary>See more</summary>
