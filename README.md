@@ -126,6 +126,8 @@ Well look at [my "transformers-llama" repo](https://github.com/cedrickchee/trans
   
   We underestimated pre-trained language models (~2019) and overestimated a lot of things.
 
+  A quick tutorial by me: [4 Steps in Running LLaMA-7B on a M1 MacBook with `llama.cpp`](https://gist.github.com/cedrickchee/e8d4cb0c4b1df6cc47ce8b18457ebde0)
+  
   My [llama.cpp](https://github.com/cedrickchee/llama.cpp) patches for Linux support. (WIP)
 
 <details>
