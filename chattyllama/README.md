@@ -84,7 +84,7 @@ Current high-level plan (tentatively):
   
   PyTorch offers a [model tuning guide](https://pytorch.org/tutorials/recipes/recipes/tuning_guide.html). 
   
-  Hardware-optimized libraries: QNNPACK supports several common ops in quantized inference mode for PyTorch.
+  Hardware-optimized libraries: [XNNPACK](https://github.com/google/XNNPACK) supports several common ops in quantized inference mode for PyTorch.
 
   **Parallelism, GPU clusters, distributed GPUs environment, Cloud**
 
