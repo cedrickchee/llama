@@ -129,6 +129,7 @@ Well look at [my "transformers-llama" repo](https://github.com/cedrickchee/trans
   A quick tutorial by me: [4 Steps in Running LLaMA-7B on a M1 MacBook with `llama.cpp`](https://gist.github.com/cedrickchee/e8d4cb0c4b1df6cc47ce8b18457ebde0)
   
   My [llama.cpp](https://github.com/cedrickchee/llama.cpp) patches for Linux support. (WIP)
+- [Dalai](https://github.com/cocktailpeanut/dalai) - The simplest way to run LLaMA on your personal computer. It automatically install and run LLaMA on your computer. Powered by [llama.cpp](https://github.com/ggerganov/llama.cpp) and Shawn's [llama-dl CDN](https://github.com/shawwn/llama-dl).
 
 <details>
 <summary>See more</summary>
