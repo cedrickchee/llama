@@ -130,6 +130,7 @@ Well look at [my "transformers-llama" repo](https://github.com/cedrickchee/trans
   
   My [llama.cpp](https://github.com/cedrickchee/llama.cpp) patches for Linux support. (WIP)
 - [Dalai](https://github.com/cocktailpeanut/dalai) - The simplest way to run LLaMA on your personal computer. It automatically install and run LLaMA on your computer. Powered by [llama.cpp](https://github.com/ggerganov/llama.cpp) and Shawn's [llama-dl CDN](https://github.com/shawwn/llama-dl).
+- [Stanford Alpaca: An Open-Source Instruction-Following LLaMA Model](https://github.com/tatsu-lab/stanford_alpaca)
 
 <details>
 <summary>See more</summary>
