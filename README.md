@@ -115,10 +115,10 @@ Well look at [my "transformers-llama" repo](https://github.com/cedrickchee/trans
 
 #### Other ports
 
+- [HuggingFace Transformers LLaMA model](https://huggingface.co/docs/transformers/main/en/model_doc/llama)
 - [Text generation web UI](https://github.com/oobabooga/text-generation-webui) - A Gradio Web UI for running Large Language Models like LLaMA, GPT-Neo, OPT, and friends. My guide: ["Installing 8/4-bit LLaMA with text-generation-webui on Linux"](https://gist.github.com/cedrickchee/1f24fa3a5e3371910e1959b96a8dff94)
 - [LLaMa CPU fork](https://github.com/markasoftware/llama-cpu) - We need more work like this that lower the compute requirements. Really under appreciated.
 - [LLaMA Jax](https://github.com/Sea-Snell/JAX_llama)
-- [Minimal LLaMA](https://github.com/cedrickchee/minimal-llama) - Jason's HuggingFace Transformers port using OPT code internally. This version should be more stable. But the code is not well-tested yet. Bonus: you can quickly see how well the model can be fine-tuned either using HuggingFace PEFT with 8-bit or Pipeline Parallelism.
 - [Running LLaMA 7B on a 64GB M2 MacBook Pro with llama.cpp](https://til.simonwillison.net/llms/llama-7b-m2) by Simon Willison - llama.cpp is from the same Whisper.cpp hacker, ggerganov. Never dissapointed by ggerganov's work.
   > It's genuinely possible to run a LLM that's hinting towards the performance of GPT3 on your own hardware now. I thought that was still a few years away.
 
@@ -137,6 +137,7 @@ Well look at [my "transformers-llama" repo](https://github.com/cedrickchee/trans
 <details>
 <summary>See more</summary>
 
+- [Minimal LLaMA](https://github.com/cedrickchee/minimal-llama) - Jason's HuggingFace Transformers port using OPT code internally. This version should be more stable. But the code is not well-tested yet. Bonus: you can quickly see how well the model can be fine-tuned either using HuggingFace PEFT with 8-bit or Pipeline Parallelism.
 - [pyllama](https://github.com/juncongmoo/pyllama) - Run LLM in a single GPU, as simple as `pip install pyllama`. It's a quick & dirty hacked version of 🦙 LLaMA. Bonus: comes with a way to start a Gradio Web UI for trying out prompting in browser. Good tips: "To load KV cache in CPU, run `export KV_CAHCHE_IN_GPU=0` in the shell.".
 - [minichatgpt](https://github.com/juncongmoo/minichatgpt) - Train ChatGPT in minutes with [ColossalAI (blog post)](https://www.hpc-ai.tech/blog/colossal-ai-chatgpt) (minichatgpt training process is pending my verification. I can confirm the code there was based on ColossalAI's [mini demo](https://github.com/hpcaitech/ColossalAI/tree/main/applications/ChatGPT). It doesn't support LLaMA yet.)
   - Supports LoRA
