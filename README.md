@@ -132,6 +132,7 @@ Well look at [my "transformers-llama" repo](https://github.com/cedrickchee/trans
 - [Dalai](https://github.com/cocktailpeanut/dalai) - The simplest way to run LLaMA on your personal computer. It automatically install and run LLaMA on your computer. Powered by [llama.cpp](https://github.com/ggerganov/llama.cpp) and Shawn's [llama-dl CDN](https://github.com/shawwn/llama-dl).
 - [Stanford Alpaca: An Open-Source Instruction-Following LLaMA Model](https://github.com/tatsu-lab/stanford_alpaca)
   - [Alpaca-LoRA](https://github.com/cedrickchee/alpaca-lora) - Fine-tuning and training code for LLaMA to replicate the Alpaca instruct-tuned model on consumer hardware, while awaiting Stanford to release their code.
+  - [Alpaca.cpp](https://github.com/antimatter15/alpaca.cpp) - Locally run an instruction-tuned chat-style LLM. This combines the LLaMA foundation model (llama.cpp) with an [open reproduction (Alpaca-LoRA)](https://github.com/cedrickchee/alpaca-lora) of [Stanford Alpaca](https://github.com/tatsu-lab/stanford_alpaca), a fine-tuning of the base model to obey instructions (akin to the [RLHF](https://huggingface.co/blog/rlhf) used to train ChatGPT).
 
 <details>
 <summary>See more</summary>
