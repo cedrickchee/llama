@@ -133,6 +133,7 @@ Well look at [my "transformers-llama" repo](https://github.com/cedrickchee/trans
 - [Stanford Alpaca: An Open-Source Instruction-Following LLaMA Model](https://github.com/tatsu-lab/stanford_alpaca)
   - [Alpaca-LoRA](https://github.com/cedrickchee/alpaca-lora) - Fine-tuning and training code for LLaMA to replicate the Alpaca instruct-tuned model on consumer hardware, while awaiting Stanford to release their code.
   - [Alpaca.cpp](https://github.com/antimatter15/alpaca.cpp) - Locally run an instruction-tuned chat-style LLM. This combines the LLaMA foundation model (llama.cpp) with an [open reproduction (Alpaca-LoRA)](https://github.com/cedrickchee/alpaca-lora) of [Stanford Alpaca](https://github.com/tatsu-lab/stanford_alpaca), a fine-tuning of the base model to obey instructions (akin to the [RLHF](https://huggingface.co/blog/rlhf) used to train ChatGPT).
+  - [Alpaca Native](https://huggingface.co/chavinlo/alpaca-native) model weights - The model was fine-tuned using the original repository: https://github.com/tatsu-lab/stanford_alpaca (no LoRA has been used). [HuggingFace Transformers inference (code and quick start guide)](https://gist.github.com/cedrickchee/3be95c8ab9f38132382737783bd5d55e).
 
 <details>
 <summary>See more</summary>
