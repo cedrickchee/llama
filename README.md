@@ -1,6 +1,6 @@
-# LLaMA
+# LLaMA 2
 
-This is a variant of the LLaMA model and has the following changes:
+This is a variant of the LLaMA 2 model and has the following changes:
 - **Compression:** 8-bit model quantization using [bitsandbytes](https://huggingface.co/blog/hf-bitsandbytes-integration)
 - **Non-Model Parallel (MP):** run 13B model in a single GPU. All MP codes removed.
 - **Extended model:**
@@ -108,7 +108,7 @@ def main(...):
 $ python inference.py
 ```
 
-### LLaMA compatible port
+### LLaMA 2 compatible port
 
 Looking to use LLaMA model with HuggingFace library?
 Well look at [my "transformers-llama" repo](https://github.com/cedrickchee/transformers-llama).
@@ -182,7 +182,7 @@ hard-ish.
 
 # Original README
 
-This repository is intended as a minimal, hackable and readable example to load [LLaMA](https://ai.facebook.com/blog/large-language-model-llama-meta-ai/) ([arXiv](https://arxiv.org/abs/2302.13971v1)) models and run inference.
+This repository is intended as a minimal, hackable and readable example to load [LLaMA 2](https://ai.facebook.com/blog/large-language-model-llama-meta-ai/) ([arXiv](https://arxiv.org/abs/2302.13971v1)) models and run inference.
 In order to download the checkpoints and tokenizer, fill this [google form](https://forms.gle/jk851eBVbX1m5TAv5)
 
 ## Setup
