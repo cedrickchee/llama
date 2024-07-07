@@ -1,5 +1,10 @@
 # LLaMA 2
 
+> [!WARNING]  
+> Outdated LLaMA 2 code example. If you are looking for Llama 3, please go to [meta-llama/llama3](https://github.com/meta-llama/llama3).
+> >
+> This will remain here for learning resources on how to port LLaMA 2 to different hardwares and frameworks.
+
 This is a variant of the LLaMA 2 model and has the following changes:
 - **Compression:** 8-bit model quantization using [bitsandbytes](https://huggingface.co/blog/hf-bitsandbytes-integration)
 - **Non-Model Parallel (MP):** run 13B model in a single GPU. All MP codes removed.
